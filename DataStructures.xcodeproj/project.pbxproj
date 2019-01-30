@@ -29,6 +29,7 @@
 		C75A040121FF8C3000C11913 /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		C75A040221FF8C3000C11913 /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
 		C75A040421FF912B00C11913 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		C78B685D220232FA0032F4EC /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,37 +62,11 @@
 		C75A03F321FF8B3200C11913 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				C78B685922022DD80032F4EC /* Model */,
+				C78B685B22022E030032F4EC /* Controller */,
 				C75A03FE21FF8BCB00C11913 /* Resources */,
-				C75A03FD21FF8BC100C11913 /* Diagrams */,
-				C75A03FC21FF8BB600C11913 /* Controller */,
-				C75A03FB21FF8BAB00C11913 /* Model */,
 			);
 			path = DataStructures;
-			sourceTree = "<group>";
-		};
-		C75A03FB21FF8BAB00C11913 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C75A040421FF912B00C11913 /* Node.hpp */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		C75A03FC21FF8BB600C11913 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C75A03FF21FF8C1F00C11913 /* Runner.cpp */,
-				C75A040121FF8C3000C11913 /* Controller.cpp */,
-				C75A040221FF8C3000C11913 /* Controller.hpp */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		C75A03FD21FF8BC100C11913 /* Diagrams */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Diagrams;
 			sourceTree = "<group>";
 		};
 		C75A03FE21FF8BCB00C11913 /* Resources */ = {
@@ -99,6 +74,33 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C78B685922022DD80032F4EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C78B685A22022DE60032F4EC /* Nodes */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C78B685A22022DE60032F4EC /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				C75A040421FF912B00C11913 /* Node.hpp */,
+				C78B685D220232FA0032F4EC /* LinearNode.hpp */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		C78B685B22022E030032F4EC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C75A03FF21FF8C1F00C11913 /* Runner.cpp */,
+				C75A040121FF8C3000C11913 /* Controller.cpp */,
+				C75A040221FF8C3000C11913 /* Controller.hpp */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,16 +281,22 @@
 		C75A03F921FF8B3200C11913 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		C75A03FA21FF8B3200C11913 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
