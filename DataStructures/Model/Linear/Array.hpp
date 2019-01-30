@@ -95,5 +95,14 @@ Type & Array<Type> :: operator [] (int index)
     return internalArray
 }
 
+template <class Type>
+Type Array<Type>:: operator [] (int index) const
+{
+    assert(index >= 0 && index < size);
+    return internalArray[index];
+}
+
+
+
 
 #endif /* Array_h */
