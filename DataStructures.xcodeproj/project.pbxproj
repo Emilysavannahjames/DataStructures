@@ -31,6 +31,7 @@
 		C708A3712204D727008C24CE /* crime.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crime.csv; sourceTree = "<group>"; };
 		C708A3722204D743008C24CE /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrimeData.cpp; sourceTree = "<group>"; };
 		C708A3742204D761008C24CE /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CrimeData.hpp; sourceTree = "<group>"; };
+		C708A3752204DBD7008C24CE /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
 		C75A03F121FF8B3200C11913 /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75A03FF21FF8C1F00C11913 /* Runner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Runner.cpp; sourceTree = "<group>"; };
 		C75A040121FF8C3000C11913 /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 			children = (
 				C75A040421FF912B00C11913 /* Node.hpp */,
 				C78B685D220232FA0032F4EC /* LinearNode.hpp */,
+				C708A3752204DBD7008C24CE /* List.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
