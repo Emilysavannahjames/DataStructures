@@ -92,7 +92,7 @@ template <class Type>
 Type & Array<Type> :: operator [] (int index)
 {
     assert(index >= 0 && index < size);
-    return internalArray
+    return internalArray[index];
 }
 
 template <class Type>
