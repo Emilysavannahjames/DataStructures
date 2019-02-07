@@ -45,6 +45,7 @@
 		C7786878220A25C3005A7204 /* Music.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Music.cpp; sourceTree = "<group>"; };
 		C78B685D220232FA0032F4EC /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		C78B685F22023A790032F4EC /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
+		C7DE29CF220CC78400FC23DC /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +158,7 @@
 			children = (
 				C78B685F22023A790032F4EC /* Array.hpp */,
 				C708A3752204DBD7008C24CE /* List.hpp */,
+				C7DE29CF220CC78400FC23DC /* LinkedList.hpp */,
 			);
 			path = Linear;
 			sourceTree = "<group>";

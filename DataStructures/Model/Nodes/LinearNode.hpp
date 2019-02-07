@@ -21,7 +21,7 @@ public:
     LinearNode(Type data);
     LinearNode(Type data, LinearNode<Type> * next);
     LinearNode<Type> * getNext();
-    void setNext(LinearNode<Type> * next);
+    void setNextNode(LinearNode<Type> * next);
 };
 
 //Implementation of templates
@@ -48,7 +48,7 @@ LinearNode<Type> * LinearNode<Type> :: getNext()
 }
 
 template <class Type>
-void LinearNode<Type> :: setNext(LinearNode<Type> * next)
+void LinearNode<Type> :: setNextNode(LinearNode<Type> * next)
 {
     this -> next = next;
 }
