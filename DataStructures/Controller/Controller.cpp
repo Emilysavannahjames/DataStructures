@@ -22,4 +22,6 @@ void Controller :: usingNodes()
     cout << wordHolder.getData() << endl;
     wordHolder.setData("Replaced text");
     cout << wordHolder.getData() << endl;
+    
+    vector<Music> tunez = FileController :: musicDataToVector("/Users/ejam6898/Documents/C++/DataStructures/DataStructures/Controller/FileController.hpp");
 }
