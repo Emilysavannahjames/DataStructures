@@ -46,6 +46,7 @@
 		C78B685D220232FA0032F4EC /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		C78B685F22023A790032F4EC /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		C7DE29CF220CC78400FC23DC /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
+		C7F00D7022120D8A00F6F1CA /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +160,7 @@
 				C78B685F22023A790032F4EC /* Array.hpp */,
 				C708A3752204DBD7008C24CE /* List.hpp */,
 				C7DE29CF220CC78400FC23DC /* LinkedList.hpp */,
+				C7F00D7022120D8A00F6F1CA /* Stack.hpp */,
 			);
 			path = Linear;
 			sourceTree = "<group>";

@@ -26,10 +26,11 @@ public:
     LinearNode<Type> * getFront();
     LinearNode<Type> * getEnd();
     
-    void add(Type item);
-    void addAtIndex(int index, Type item);
-    Type getFromIndex(int index);
-    Type remove(int index);
+    virtual void add(Type item);
+    virtual void addAtIndex(int index, Type item);
+    virtual Type getFromIndex(int index);
+    virtual Type remove(int index);
+    bool contains(Type item);
 };
 
 LinkedList<Type> :: LinkedList()
@@ -64,6 +65,98 @@ void LinkedList<Type>:: add(Type item)
    }
     this->end = newData;
     this->size += 1;
+}
+
+void LinkedList<Type> :: addAtIndex(int index, Type item)
+{
+    assert(index >= 0 && index <= this->size)
+    if(index == this->size)
+    {
+        add(item);
+    }
+    else
+    {
+        LinearNode<Type> * toBeAdded = new LinearNode<Type>(item);
+        if(index == 0)
+        {
+            toBeAdded->setNextNode(front);
+            front = toBeAdded;
+        }
+        else
+        {
+            LinearNode<Type> * previous = nullptr;
+            LinearNode<Type> * current = front;
+            for(int position = 0; position < index; position++)
+            {
+                previous = current;
+                current = current->getNextNode();
+            }
+            previous->setNextNode(toBeAdded);
+            toBeAdded->setNextNode(current);
+        }
+        this->size++;
+    }
+    
+    Type LinkedList<Type> :: getFromIndex(int index)
+    {
+        assert(index >= 0 && index < this->size);
+        Type data;
+        
+        LinearNode<Type> * current = front;
+        
+        for(int position = 0; position < index < this->size);
+        {
+            current = current->getNextNode();
+        }
+        data = current->getData();
+        
+        return data;
+    }
+    
+    Type LinkedList<Type> :: remove(int index)
+    {
+        LinearNode<Type> * current = front;
+        LinearNode<Type> * toBeRemoved = nullptr;
+        LinearNode<Type> * previous = nullptr;
+        
+        Type removedData;
+        
+        if(index == 0)
+        {
+            toBeRemoved = front;
+            this->front = this->front->getNextNode();
+        }
+        else
+        {
+            for(int index = 0; index < getSize(); index++)
+            {
+                if (searchPointer->getData()== thingToFind)
+                {
+                    return true;
+                }
+                searchPointer = searchPointer->getNextNode();
+            }
+            
+        }
+        
+        template <class Type>
+        bool LinkedList<Type> :: contains(Type thingToFind)
+        {
+            bool exists = false;
+            
+            LinearNode<Type> * searchPointer = front;
+            
+            for(int index = 0; index < getSize(); index++)
+            {
+                if (searchPointer->getData()== thingToFind)
+                {
+                    return true;
+                }
+                searchPointer = searchPointer->getNextNode();
+            }
+            return exists;
+        }
+    }
 }
 
 #endif /* LinkedList_h */
