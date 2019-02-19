@@ -11,17 +11,21 @@
 void Controller:: start()
 {
     cout << "Welcome to the Data Structures App." << endl;
-    usingNodes();
+    testLinear();
 }
 
 void Controller :: usingNodes()
 {
-    Node<int> mine(5);
-    Node<string> wordHolder("Words can be stored too");
+    LinearNode<int> mine(5);
+    LinearNode<string> wordHolder("Words can be stored too");
     cout << mine.getData() << endl;
     cout << wordHolder.getData() << endl;
     wordHolder.setData("Replaced text");
     cout << wordHolder.getData() << endl;
-    
-    vector<Music> tunez = FileController :: musicDataToVector("/Users/ejam6898/Documents/C++/DataStructures/DataStructures/Controller/FileController.hpp");
+}
+
+void Controller :: testLinear()
+{
+    LinearTester lookieHere;
+    lookieHere.testVsSTL();
 }

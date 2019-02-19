@@ -12,7 +12,8 @@
 #include <iostream>
 #include "../Model/Nodes/Node.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
-#include ""
+#include "FileController.hpp"
+#include 
 
 using namespace std;
 
@@ -20,6 +21,7 @@ class Controller
 {
 private:
     void usingNodes();
+    void testLinear();
 public:
     void start();
 };
