@@ -87,13 +87,15 @@ void CircularList<Type> :: add(Type item)
     {
         addedNode = new DoubleNode<Type>(item);
         this->front = addedNode;
+        this->end = addedNode;
+        this->end->setNext(addedNode);
     }
     else
     {
         addedNode = new DoubleNode<Type>(item, this-> end, this->front);
+        this->end->setNext(addedNode);
     }
     
-    this->end->setNext(addedNode);
     this->front->setPrevious(addedNode);
     this->end = addedNode;
     this->size++;
@@ -123,9 +125,11 @@ void CircularList<Type> :: addAtIndex(int index, Type item)
     if(index == 0)
     {
         this->front = addMe;
+        
     }
     else if(index == this->size)
     {
+        addedNode = new DoubleNode<Type>(item, this-> end, this->front);
         this->end = addMe;
     }
     previous->setNext(addMe);
@@ -151,8 +155,8 @@ Type CircularList<Type> :: remove(int index)
     
     if (index == 0)
     {
-        this->front = removedNext;
-        this->end->setNext(removedNext);
+      
+        this->end->setNext(addedNode);
     }
 
     removedPrevious->setNext(removedNext);
