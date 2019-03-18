@@ -39,7 +39,7 @@ public:
     //disconnect vectices
     void removeEdge(int source, int target);
     void removeEdgeUndirected(int source, int target);
-    void removeedgeCost(int source, int target);
+    void removeEdgeCost(int source, int target);
     
     //accessors
     Type& operator [] (int vertex);
@@ -264,6 +264,17 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int start)
         }
     }
     return cost;
+}
+template <class Type>
+Graph<Type> :: Graph()
+{
+    this->vertexCount = 0;
+    
+    for(int index =0; index < MAXIMUM; index++)
+    {
+        int * row = weightCostMatrix[index];
+        std::fill_n(row, Maximum, 0);
+    }
 }
 
 #endif /* Graph_h */
