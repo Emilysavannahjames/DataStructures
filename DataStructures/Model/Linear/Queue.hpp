@@ -16,7 +16,7 @@ using namespace std;
 
 template<class Type>
 class Queue : public LinkedList<Type>
-
+{
 public:
 Queue();
 ~Queue();
@@ -31,7 +31,7 @@ void addAtIndex(int index, Type data);
 Type getFromIndex(int index);
 Type remove(int index);
 
-
+};
 template<class Type>
 Queue<Type>:: Queue() : LinkedList<Type>()
 {
@@ -71,7 +71,7 @@ void Queue<Type> :: addAtIndex(int index, Type item)
 }
 
 template<class Type>
-Type Queue<Type> :: add(Type item)
+void Queue<Type> :: add(Type item)
 {
     enqueue(item);
 }

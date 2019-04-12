@@ -18,8 +18,8 @@
 #include "../Model/Linear/LinkedList.hpp"
 //#include "../Model/NonLinear/BinarySearchTree.hpp"
 
-#include "../Resources/CrimeData.hpp"
-#include "../Resources/Music.hpp"
+#include "../Data/CrimeData.hpp"
+#include "../Data/Music/Music.hpp"
 
 
 class FileController

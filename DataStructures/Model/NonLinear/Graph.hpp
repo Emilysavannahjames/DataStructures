@@ -9,9 +9,10 @@
 #ifndef Graph_hpp
 #define Graph_hpp
 
-#ifndef <set>
+#include <set>
 #include <queue>
 #include <assert.h>
+#include <iostream>
 
 using namespace std;
 template <class Type>
@@ -20,10 +21,10 @@ class Graph
 private:
     static const int MAXIMUM = 50;
     bool adjacencyMatrix [MAXIMUM][MAXIMUM];
-    int weightCost [MAXIMUM][MAXIMUM];
+    int weightCostMatrix [MAXIMUM][MAXIMUM];
     Type graphData[MAXIMUM];
     int vertexCount;
-    int depthFirstTraversal(Graph<Type> & graph, int vertex, bool markedVertices[]);
+    void depthFirstTraversal(Graph<Type> & graph, int vertex, bool markedVertices[]);
 
 public:
     Graph();
@@ -44,7 +45,7 @@ public:
     //accessors
     Type& operator [] (int vertex);
     Type operator [] (int vertex) const;
-    int sizee() const;
+    int size() const;
     
     //check connections
     bool hasUndirectedConnection(int source, int target) const;
@@ -55,7 +56,7 @@ public:
     void depthFirstTraversal(Graph<Type> & graph, int vertex);
     void breadthFirstTraversal(Graph<Type> & graph, int vertex);
     int costTraversal(Graph<Type> & graph, int vertex);
-}
+};
 
 template <class Type>
 const int Graph<Type> :: MAXIMUM;
@@ -82,7 +83,7 @@ Type& Graph<Type> :: operator[](int vertex)
 
 //right hand side operator
 template <class Type>
-Type& Graph<Type> :: operator[](int vertex) const
+Type Graph<Type> :: operator[](int vertex) const
 {
     assert(vertex < vertexCount);
     return graphData[vertex];
@@ -143,7 +144,7 @@ void Graph<Type> :: removeEdgeUndirected(int source, int target)
 
 
 template <class Type>
-void Graph<Type> :: removeEdgeCost(int source, int target, int cost)
+void Graph<Type> :: removeEdgeCost(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     weightCostMatrix[source][target] = 0;
@@ -156,7 +157,7 @@ bool Graph<Type> :: hasUndirectedConnection(int source, int target) const
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     
     bool isAnEdge = false;
-    isAnEdge= adjacenyMAtrix[source][target] || adjacencyMatrix[target][source];
+    isAnEdge= adjacencyMatrix[source][target] || adjacencyMatrix[target][source];
     
     return isAnEdge;
 }
@@ -180,7 +181,7 @@ std::set<int>Graph<Type> :: neighbors(int vertex)const
 }
 
 template <class Type>
-void Graph<Type> :: depthFirstTraversal(Graph<Type> & graph, int vertex)
+void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex)
 {
     bool visitedVertices[MAXIMUM];
     assert(vertex < currentGraph.size());
@@ -197,16 +198,16 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex, 
     visited[vertex] = true;
     cout << currentGraph[vertex] << ", " << endl;
     
-    for(setIterator = connections.begin(); setIterator != connection.end(); setIterator++)
+    for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
     {
         if(!visited[*setIterator])
         {
-            depthFirstTraversal(currentGraph, *setIterator, visited)
+            depthFirstTraversal(currentGraph, *setIterator, visited);
         }
     }
 }
 
-template <class type>
+template <class Type>
 void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex)
 {
     assert(vertex < currentGraph.size());
@@ -243,8 +244,8 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int start)
     bool visited[MAXIMUM];
 
     std::set<int> connections;
-    std::set<int>iterator setIterator;
-    std::queue<int vertexQueue;
+    std::set<int>::iterator setIterator;
+    std::queue<int> vertexQueue;
     std::fill_n(visited,currentGraph.size(),false);
     visited[start] = true;
     vertexQueue.push(start);
@@ -259,22 +260,11 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int start)
             if(!visited[*setIterator])
             {
                 cost += weightCostMatrix[currentIndex][*setIterator];
-                vertexQueue.push(*setIterator)
+                vertexQueue.push(*setIterator);
             }
         }
     }
     return cost;
-}
-template <class Type>
-Graph<Type> :: Graph()
-{
-    this->vertexCount = 0;
-    
-    for(int index =0; index < MAXIMUM; index++)
-    {
-        int * row = weightCostMatrix[index];
-        std::fill_n(row, Maximum, 0);
-    }
 }
 
 #endif /* Graph_h */

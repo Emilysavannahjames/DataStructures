@@ -8,7 +8,7 @@
 
 #include "BinaryTreeTester.hpp"
 
-void BinaryTreeNode:: treeStuff()
+void BinaryTreeTester:: treeStuff()
 {
     
 }
