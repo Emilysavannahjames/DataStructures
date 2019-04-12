@@ -69,29 +69,43 @@ int BinarySearchTree<Type> :: getSize()
     return -1;
 }
 template <class Type>
-int BinarySearchTree<Type> :: isComplete()
+bool BinarySearchTree<Type> :: isComplete()
 {
     return false;
 }
 template <class Type>
-int BinarySearchTree<Type> :: isBalanced()
+bool BinarySearchTree<Type> :: isBalanced()
 {
     return false;
 }
 template <class Type>
-int BinarySearchTree<Type> :: inOrderTraversal
+void BinarySearchTree<Type> :: inOrderTraversal
 {
     
 }
 template <class Type>
-int BinarySearchTree<Type> :: preOrderTraversal
+void BinarySearchTree<Type> :: preOrderTraversal
 {
     
 }
 template <class Type>
-int BinarySearchTree<Type> :: postOrderTraversal()
+void BinarySearchTree<Type> :: postOrderTraversal()
 {
     
 }
-
+template <class Type>
+void BinarySearchTree<Type> :: insert(Type item)
+{
+    
+}
+template <class Type>
+bool BinarySearchTree<Type> :: contains(Type value)
+{
+    return false;
+}
+template <class Type>
+void BinarySearchTree<Type> :: remove(Type item)
+{
+    
+}
 #endif /* BinarySearchTree_h */
