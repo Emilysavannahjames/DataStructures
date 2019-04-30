@@ -27,13 +27,13 @@ public:
     void setRightChild(BinaryTreeNode<Type>* right);
     void setLeftChild(BinaryTreeNode<Type>* left);
     
-    BinaryNodeTree * getRootNode();
-    BinaryNodeTree * getLeftChild();
-    BinaryNodeTree * getRightChild();
+    BinaryTreeNode * getRootNode();
+    BinaryTreeNode * getLeftChild();
+    BinaryTreeNode * getRightChild();
 };
 
 template <class Type>
-BinaryNodeTree<Type> :: BinaryTreeNode() : Node<Type>()
+BinaryTreeNode<Type> :: BinaryTreeNode() : Node<Type>()
 {
     root = nullptr;
     left = nullptr;
@@ -41,7 +41,7 @@ BinaryNodeTree<Type> :: BinaryTreeNode() : Node<Type>()
 }
 
 template <class Type>
-BinaryTreeNode<Type> :: BinaryNodeTree(Type data) : Node<Type>(data)
+BinaryTreeNode<Type> :: BinaryTreeNode(Type data) : Node<Type>(data)
 {
     root = nullptr;
     left = nullptr;

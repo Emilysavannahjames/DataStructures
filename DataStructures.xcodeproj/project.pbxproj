@@ -45,6 +45,7 @@
 		C75A040121FF8C3000C11913 /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		C75A040221FF8C3000C11913 /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
 		C75A040421FF912B00C11913 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		C76CB9C42278C16200FF5958 /* AVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVLTree.h; sourceTree = "<group>"; };
 		C7786873220A15A6005A7204 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		C7786874220A15A6005A7204 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		C7786877220A2560005A7204 /* Music.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Music.hpp; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 				C7465F2D222DB8BB009C5E52 /* Graph.hpp */,
 				C7EA7461226113EA00998DC5 /* Tree.hpp */,
 				C7EA74622261162700998DC5 /* BinarySearchTree.hpp */,
+				C76CB9C42278C16200FF5958 /* AVLTree.h */,
 			);
 			path = NonLinear;
 			sourceTree = "<group>";
