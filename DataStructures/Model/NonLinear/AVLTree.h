@@ -37,7 +37,46 @@ public:
 template <class Type>
 AVLTree<Type> :: AVLTree() : BinarySearchTree<Type>()
 {
+    this->root = nullptr;
+}
+template <class Type>
+void AVLTree<Type>::insert (type item)
+{
+    insertNode(this->getRoot(), item);
     
+}
+
+template <class Type>
+void AVLTree<Type>:: remove(Type item)
+{
+    removeNode(this->getRoot(),item);
+}
+
+template <class Type>
+BinaryTreeNode<Type>* AVLTree<Type> :: insertNode(BinaryTreeNode<Type>* parent, Type inserted)
+{
+    if(parent == nullptr)
+    {
+        parent = new BinaryTreeNode<Type>(inerted);
+        
+        if(this->getRoot()== nullptr)
+        {
+            this->setRoot(parent)
+        }
+        
+        return parent;
+    }
+    else if(inserted < parent -> getNodeData())
+    {
+        parent->setLeftChild(insertNode(parent->getLeftChild(), inserted));
+        parent = balanceSubTree(parent);
+    }
+    else if(inserted > parent -> getNodeData())
+    {
+        parent->setRightChild(insertNode(parent->getRightChild(), inserted));
+        parent = balanceSubTree(parent);
+    }
+    return parent;
 }
 
 
